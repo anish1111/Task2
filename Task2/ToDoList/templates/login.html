@@ -1,0 +1,10 @@
+<form class="" action="" method="post">
+  {% csrf_token %}
+  {% for field in form %}
+    <div class="">
+      <label for="">{{ field.name }}</label>
+      {{ field }}
+    </div>
+  {% endfor %}
+  <input type="submit" name="" value="Login">
+</form>

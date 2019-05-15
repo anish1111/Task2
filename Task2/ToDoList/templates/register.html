@@ -1,0 +1,10 @@
+<form class="" action="" method="post">
+  {% csrf_token %}
+  {% for field in form %}
+    <div class="{{ field.name }}" {% if field.name == 'last_login' or field.name == 'is_superuser' or field.name == 'user_permissions' or field.name == 'is_active' or field.name == 'is_staff' or field.name == 'groups' or field.name == 'date_joined'  %} style="display:none" {% endif %}>
+      <label for="">{{ field.name }}</label>
+      {{ field }}
+    </div>
+  {% endfor %}
+  <input type="submit" name="" value="Register">
+</form>
